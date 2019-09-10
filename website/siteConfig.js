@@ -1,3 +1,4 @@
+
 const users = [
   {
     caption: 'User1',
@@ -5,12 +6,12 @@ const users = [
     // if it is not '/', like: '/test-site/img/image.jpg'.
     image: '/img/undraw_open_source.svg',
     infoLink: 'https://www.facebook.com',
-    pinned: false,
+    pinned: true,
   },
 ];
 
 const siteConfig = {
-  title: 'KiraEx', // Title for your website.
+  title: 'Kira Exchange', // Title for your website.
   tagline: 'Interchain Exchange',
   url: 'https://kiraex.github.io', // Your website URL
   baseUrl: '/', // Base URL for your project */
@@ -21,11 +22,16 @@ const siteConfig = {
   // Used for publishing and more
   projectName: 'docs',
   organizationName: 'Kira-Exchange',
+  // For top-level user or org sites, the organization is still the same.
+  // e.g., for the https://JoelMarcey.github.io site, it would be set like...
+  //   organizationName: 'JoelMarcey'
 
   // For no header links in the top nav bar -> headerLinks: [],
-  headerLinks: [],
+  headerLinks: [
+   ],
 
   // If you have users set above, you add it here:
+  disableHeaderTitle: false,
   users,
 
   /* path to images for header/footer */
@@ -35,13 +41,11 @@ const siteConfig = {
 
   /* Colors for website */
   colors: {
-    //f5f5f5
     primaryColor: '#C792DF',
-    secondaryColor: '#FFFFFF',
+    secondaryColor: 'grey',
   },
 
-  /* Custom fonts for website */
-  /*
+  
   fonts: {
     myFont: [
       "Times New Roman",
@@ -52,14 +56,12 @@ const siteConfig = {
       "system-ui"
     ]
   },
-  */
 
   // This copyright info is used in /core/Footer.js and blog RSS/Atom feeds.
-  copyright: `Copyright © ${new Date().getFullYear()} KiraEx`,
+  copyright: `Copyright © ${new Date().getFullYear()} Kira Exchange`,
 
   highlight: {
-    // Highlight.js theme to use for syntax highlighting in code blocks.
-    theme: 'default',
+    theme: 'atom-one-light',
   },
 
   // Add custom scripts here that would be placed in <script> tags.
@@ -68,16 +70,22 @@ const siteConfig = {
   // On page navigation for the current documentation page.
   onPageNav: 'separate',
   // No .html extensions for paths.
+  docsSideNavCollapsible: true,
   cleanUrl: true,
 
   // Open Graph and Twitter card images.
   ogImage: 'img/undraw_online.svg',
   twitterImage: 'img/undraw_tweetstorm.svg',
 
+  // For sites with a sizable amount of content, set collapsible to true.
+  // Expand/collapse the links and subcategories under categories.
+  // docsSideNavCollapsible: true,
+
   // Show documentation's last contributor's name.
   enableUpdateBy: false,
 
-  enableUpdateTime: true,
+  // Show documentation's last update time.
+ enableUpdateTime: true,
 
   // You may provide arbitrary config keys to be used as needed by your
   // template. For example, if you need your repo's URL...
